@@ -1,0 +1,11 @@
+<header>
+  <a href="/">Tasklist</a>
+  <ul class="navbar-nav">
+    <% if logged_in? %>
+      <li><%= link_to 'ログアウト', logout_path, method: :delete %></li>
+    <% else %>
+      <li><%= link_to 'ユーザ新規登録', signup_path %></li>
+      <li><%= link_to 'ログイン', login_path %></li>
+    <% end %>
+  </ul>
+</header>
